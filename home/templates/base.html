@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    
+    {%block links%} {%endblock%}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jquery cdn-->
+    
+
+    <!-- material design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <link rel="stylesheet" type="text/css" href="{%static 'home/css/base.css'%}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js">
+
+
+
+
+    <title>{%block title%} {%endblock%}</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <!-- 3d11ce -->
+    
+    
+    <div id="accordian">
+        <div id="closebtn">
+            <button style="margin-left: 90%; color:white;" type="button" class="btn-close" id="closenav" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <ul class="show-dropdown">
+            <li class="active">
+                <a href="{%url 'home'%}"><i class="fas fa-home"></i>Home</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);"><i class="far fa-handshake"></i>General  Meetings</a>
+                <ul class="show-dropdown">
+                    <li><a href="javascript:void(0);">Weekly Meets</a></li>
+                    <li><a href="javascript:void(0);">Monthly Meets</a></li>
+                    <li><a href="javascript:void(0);">Anually Meets</a></li>
+                </ul>
+            </li>
+            <li><a href="{%url 'notices'%}"><i class="fas fa-flag-checkered"></i>Notices</a></li>
+                <li>
+                    <a href="{%url 'events'%}"><i class="fas fa-calendar-week"></i>Upcoming Events</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fas fa-people-arrows"></i>Know your society</a>
+                    <ul class="show-dropdown">
+                        <li><a href="{%url 'managingCommittee'%}">Managing committee</a></li>
+                        <li><a href="{%url 'expenses'%}">Electric Expenses</a></li>
+                        <li><a href="{%url 'rar'%}">Rules and Regulations</a></li>
+                        <li><a href="{%url 'expenses'%}">Procedures</a></li>
+                        <li><a href="{%url 'dosanddonts'%}">Do's and Dont's</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="javascript:void(0);"><i class="fas fa-image"></i>Flat Gallery</a></li>
+        
+        </ul>
+    </div>
+
+
+
+
+
+
+
+     
+    <div class="navCont">
+        <div class="navbar7hills">
+            <div></div>
+            <div class="logo">
+                <p class="logoText">Mantra 7-Hills</p>
+            </div> 
+            <div class="nav_icon dotNav" id="tiltnav">
+                <input type="checkbox" id="navcheck">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+            
+    </div>
+
+    
+
+    {%block content%}
+
+    {%endblock%}
+
+   
+
+</body>
+
+<script>
+    const opennav = ()=>{
+        $(document).ready(()=>{
+            $("#accordian").css("width","270px")
+        
+            $("#accordian").css("display","block")
+        })
+    }
+    
+    const closenav = ()=>{
+        $(document).ready(()=>{
+            $("#accordian").css("width","0")
+            $("#accordian").css("display","none")
+    
+        })
+    }
+    
+    
+    
+    let navcheck = document.getElementById("navcheck")
+    let closebtn = document.getElementById("closenav")
+
+   
+    navcheck.addEventListener("click",()=>{
+
+        if(navcheck.checked){
+            opennav()
+        }
+        else{
+            closenav()
+        }
+        
+    })
+    
+    closebtn.addEventListener("click",()=>{
+        closenav();
+    })
+    
+</script>
+
+<script src="{%static 'home/js/base.js'%}"></script>
+
+
+{%block javascript%}
+
+{%endblock%}
+
+
+{%include 'footer.html'%}
+
+</html>

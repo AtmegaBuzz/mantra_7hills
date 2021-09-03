@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+.SuccessMessage{
+  width: 100%;
+  text-align: center;
+  background-color: green;
+}
+
+.ErrorMessage{
+  width: 100%;
+  text-align: center;
+  color: red;
+  background-color: red;
+}
+
+
+.EventsCont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #23252f;
+  padding: 35px;
+  max-width: 640px;
+  width: 80%;
+  box-shadow: 0 0 10px black;
+  margin-top: 40px;
+}
+
+.event * {
+  color: white;
+}
+
+.event span {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.event h1 {
+  font-weight: 32px;
+  line-height: 42px;
+  margin-bottom: 15px;
+}
+
+.event p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+
+.event h2 {
+  line-height: 42px;
+  font-size: 26px;
+  margin-bottom: 38px;
+}
+
+.event form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.event form .yatay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.event form .yatay + .yatay {
+  margin-top: 25px;
+}
+
+.event form .yatay label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.event form .yatay label + label {
+  margin-left: 25px;
+}
+
+.event form .yatay label span {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.event form .yatay label input {
+  padding-left: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: 1px solid #464856;
+  background-color: transparent;
+}
+
+.event form .yatay label input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  color: #464856;
+}
+
+.event form .yatay label input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  color: #464856;
+}
+
+.event form .yatay label input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  color: #464856;
+}
+
+.event form .yatay label input::placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  color: #464856;
+}
+
+.footer_up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.footer_up label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer_up label input {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent !important;
+}
+
+.footer_up label span {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#select-box {
+  background-color: transparent;
+  padding-left: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: 1px solid #464856;
+  background-color: transparent;
+  height: 54px;
+}
+
+#select-box option {
+  background-color: #464856;
+  color: white;
+}
+
+
+.submitBtn{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitBtn button {
+  background-color: #fff;
+  padding: 23px 52px;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .yatay {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .yatay label + label {
+    margin-left: 0px !important;
+    margin-top: 15px;
+  }
+}
+
+
+.rootEventCont{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.latestEvents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+}
+
+.latestEvents h1{
+  display: grid;
+grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+align-items: center;
+text-align: center;
+gap: 40px;
+}
+
+.latestEvents h1::before, .latestEvents h1::after {
+  content: '';
+  border-top: 6px double;
+}
+
+

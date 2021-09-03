@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+
+{%block links%} 
+    {%load static%}
+    <link rel="stylesheet" type="text/css"  href="{%static 'knowyoursociety/css/dosanddonts.css'%}">
+    
+{%endblock%}
+
+{%block title%}Do's And Dont's | 7Hill Mantra{%endblock%}
+
+
+{%block content%}
+
+    <div class="rootCont">
+
+        <div class="heading">
+            <h1>Do's & Dont's</h1>
+        </div>
+    
+        <div class="dos">
+            <div class="dosHeading"><h2>Do's</h2></div>
+
+            <div class="contentCont">
+                <ol>
+                    <li>
+                        Taking Ownership
+                        
+                        <ul>
+                            <li>Owners should take full responsibility of their flats, allotted parking zones, visiting guests and family members</li>
+                            <li>Tenants should take responsibility of their vehicles, family members and / or visiting guests.</li>
+                            <li>Owners leasing/renting out their flats, should be responsive to society needs and take responsibility of the tenants' conduct. Owners should get NOC from society before renting / leasing to tenants.</li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        Watchful & Observant
+                        
+                        <ul>
+                            <li>We cannot solely depend on security team for the security of society, if members are watchful and observant towards the various happening and activities within their respective buildings and/or society premises and take care or report to security or society office, it would improve the security of society.</li>
+                            <li>Society office has employed security personnel for keeping a check, but a vigilant resident can certainly add more value.</li>
+                        </ul>
+
+                    </li>
+
+
+                    <li>Assist Society Office by Volunteering Participate in community program (s) & initiatives</li>
+
+                    <li>Pay society charges before due date</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <div class="dos">
+            <div class="dosHeading"><h2>Dont's</h2></div>
+
+            <div class="contentCont">
+                <ol>
+                   <li>Noise Pollution</li>
+                   <li>Violating rule</li>
+                   <li>Littering</li>
+                   <li>Speeding</li>
+                   <li>Misbehaving</li>
+                </ol>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}    
+
+<script src="{%static '/knowyoursociety/js/dosanddonts.js'%}"></script>
+{%endblock%}

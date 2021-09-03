@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+
+{%block links%} 
+    {%load static%}
+    <link rel="stylesheet" type="text/css"  href="{%static 'knowyoursociety/css/expenses.css'%}">
+    
+{%endblock%}
+
+{%block title%}Do's And Dont's | 7Hill Mantra{%endblock%}
+
+
+{%block content%}
+
+    <div id="container" style="">
+        <canvas id="pie-chart"></canvas>
+    </div>
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}    
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<script>
+
+    var config = {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: {{ data|safe }},
+          backgroundColor: {{bgcolor|safe}},
+          label: 'Electricity Expenses'
+        }],
+        labels: {{ labels|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+    window.onload = function() {
+      var ctx = document.getElementById('pie-chart').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+    };
+
+  </script> 
+
+{%endblock%}

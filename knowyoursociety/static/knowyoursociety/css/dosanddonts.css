@@ -1,0 +1,71 @@
+
+.rootCont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.heading h1{
+    width: 50%;
+    display: grid;
+  grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  }
+  
+  .heading h1::before, .heading h1::after {
+    content: '';
+    border-top: 6px double;
+  }
+  
+.dos{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Besley:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:wght@500&display=swap");
+
+
+.dosHeading{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px double rgb(54, 2, 138); 
+    margin-left: 10px;
+}
+.dosHeading h2{
+    font-family: 'Besley', serif;
+    font-size: 2rem;
+    font-weight:600;
+    color: rgb(54, 2, 138);
+}
+
+.contentCont{
+    padding: 20px;
+}
+
+.contentCont ol li{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.contentCont ul li{
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+

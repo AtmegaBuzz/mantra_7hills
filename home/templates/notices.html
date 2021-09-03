@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+
+{%block links%} 
+    {%load static%}
+    <link rel="stylesheet" type="text/css"  href="{%static 'home/css/notices.css'%}">
+    
+{%endblock%}
+
+{%block title%}7Hills Mantra{%endblock%}
+
+{%block content%}
+
+    <div class="rootNoticeCont">
+
+        <div class="latestNotices">
+            <h1>Latest Notices</h1>
+        </div>
+
+        <div class="noticeCont">
+
+            
+
+            {%if messages%}
+                {%for message in messages%}
+                    <p class="message">{{message}}</p>
+                {%endfor%}
+            {%endif%}
+
+            {%for notice in notices%}
+                    <div class="notice">
+                        <div class="noticeHeading">
+                            <p>{{notice.heading}}</p>
+                            <small class="date"> <strong>Date: </strong>{{notice.updated_at}}</small>
+                        </div>
+                        <div class="NoticeContent">
+                            <div class="noticeAttatchments" style="background-image: url();">
+                            </div>
+                            <div class="noticeDesc"><pre>{{notice.description|safe}}</pre></div>
+                        </div>
+                    </div>
+            {%endfor%}
+
+        </div>
+
+    </div>
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}    
+<script src="{%static '/home/js/notices.js'%}"></script>
+{%endblock%}

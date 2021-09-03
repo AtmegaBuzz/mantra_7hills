@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+
+{%block links%}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{%static 'home/css/events.css'%}">
+
+{%endblock%}
+
+{%block title%}7Hills Mantra{%endblock%}
+
+{%block content%}
+
+
+
+<div class="rootEventCont">
+
+    <!-- heading -->
+    <div class="latestEvents">
+        <h1>Latest Events</h1>
+    </div>
+
+    <!-- events -->
+
+    <div class="EventsCont">
+
+    <!--  no events message -->
+    {%if messages%}
+    {%for message in messages%}
+        {%if "success" in message.extra_tags%}
+            <p style="text-align: center;color:green;">{{message}}</p>
+        
+        {%else%}
+            <p style="text-align: center;color:red;">{{message}}</p>
+
+        {%endif%}
+    {%endfor%}
+    {%endif%}
+
+
+    {%for event in events%}
+
+            <div class="event">
+                <span>{{event.updated_at}}</span>
+                <h1>{{event.heading}}</h1>
+                <p><pre>{{event.description|safe}}</pre></p>
+                <a href="{%url 'detailevent' pk=event.id%}">See more Info</a>
+            </div>
+            
+    {%endfor%}
+            
+            
+    </div>
+
+</div>
+
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}
+<script src="{%static '/home/js/events.js'%}"></script>
+{%endblock%}

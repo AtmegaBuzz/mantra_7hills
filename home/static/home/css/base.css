@@ -1,0 +1,202 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.dotNav input{
+	position: absolute;
+	opacity: 0;
+	width: 50px;
+	height: 50px;
+	  
+	  
+}
+
+#closebtn{
+	width: 100%;
+	height: 10vh;
+}
+
+#closenav{
+	background-color: rgb(255, 255, 255);
+	
+}
+
+#tiltnav i{
+	color: white;
+}
+
+
+/* Scrollbar-effect------- */
+
+
+#accordian::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+#accordian::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+#accordian::-webkit-scrollbar-thumb {
+    background: #0089ff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#accordian::-webkit-scrollbar-thumb:hover {
+    background: #d5b14c;
+    transition: 0.5s;
+}
+
+
+
+/* --------- */
+
+#accordian {
+	background: rgb(60, 10, 175);
+	width: 250px;
+	padding: 10px;
+	float: left;
+	height: 100vh;
+	overflow-x: hidden;
+	display: none;
+	position: fixed;
+}
+
+
+#accordian a {
+	
+	
+	
+}
+
+
+i {
+	margin-right: 10px;
+}
+
+#accordian li {
+	list-style-type: none;
+}
+
+#accordian ul li a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+/* 	line-height: 34px; */
+	padding: 12px 15px;
+	transition: all 0.15s;
+	position: relative;
+	border-radius: 3px;
+}
+
+#accordian>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a{
+	background-color: #f8f8f8;
+    color: #2e2b2b;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#accordian>ul>li>ul,
+#accordian>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul {
+	display: none;
+}
+
+
+#accordian>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li>ul>li>ul>li.active>ul.show-dropdown {
+	display: block;
+}
+
+#accordian>ul>li>ul,
+#accordian>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul {
+	padding-left: 20px;
+}
+
+#accordian a:not(:only-child):after {
+	content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 15px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#accordian .active>a:not(:only-child):after {
+		transform: rotate(90deg);
+}
+
+.navCont{
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 10vh;
+	background-color: rgb(60, 10, 175);
+}
+.navbar7hills{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	height: 100%;
+	background-color: rgb(60, 10, 175);
+}
+
+.logo7Hills{
+	display: flex;
+	align-items: center;
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+	height: 100%;
+	display: flex;
+	
+}
+
+/* 7hills logo */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+.logoText {
+	margin-top: 20px;
+    font-size: 2rem;
+    color: rgb(198, 173, 230);
+	margin-left: 15px;
+    text-shadow: 5px 5px 30px rgb(85, 22, 144);
+    font-family: 'Lobster', cursive;
+    animation-name: repeat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-weight: lighter;
+}
+
+@keyframes repeat {
+
+  from {color: rgb(156, 156, 160); text-shadow: 5px 5px 30px rgb(156, 156, 160);}
+  to {color: rgb(255, 255, 255); text-shadow: 5px 5px 30px  rgb(255, 255, 255);}
+
+}
+
+
+
+
+

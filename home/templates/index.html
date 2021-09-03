@@ -1,0 +1,124 @@
+{%extends 'base.html'%}
+
+{%block links%} 
+    {%load static%}
+    <link rel="stylesheet" type="text/css"  href="{%static 'home/css/index.css'%}">
+    
+{%endblock%}
+
+{%block title%}7Hills Mantra{%endblock%}
+
+{%block content%}
+
+<!-- mantra 7hills c-block introduction start -->
+
+<div class="homecontent">
+    <div class="intro">
+        <div class="wrapper">
+            <div class="imageCoverCont">
+                <img src="{%static 'home/images/7hills.jpg'%}" alt="" class="image--cover" />
+            </div>
+            
+            <div class="typingtext">
+
+                <p id="society">Mantra 7-Hills Cooprative Society</p>
+                <h1 style="display: flex;font-size:1.5rem;">
+                        <p>Block C :</p>
+                        <p  class="typewrite" data-period="2000" 
+                        data-type='[ "  Meetings.", "  Programmes.","And Many More." ]'>
+                        <span class="wrap"></span>
+                        </p>
+                </h1>
+                <p class="lead text-muted">
+                    Site created for block-C members, members can find information regarding committee, 
+                    updates, Upcoming Events, General Body Meetings, Complaints, etc.
+                </p>
+                  
+            </div>
+
+            
+        </div>          
+        </div>
+    </div>
+
+    <!-- mantra 7hills c-block introduction end -->
+
+    <!-- notices and events block start -->
+    <div class="Info">
+      <div class="notice">
+        <div class="heading_notice"><h1>Notice</h1></div>
+        <div class="accordion_data">
+          <ul class="accordion">    
+            
+
+            {%if notice_len == 0%}
+              {%if messages%}
+
+                {%for message in messages%}
+                    {%if "notice" in message.extra_tags%}  
+                        <p class="message info">{{message}}</p>
+                    {%endif%}
+                {%endfor%}
+              {%endif%}
+
+            {%else%}
+
+                {%for notice in notice_desc%}
+                <li>
+                  <a class="toggle" href=#>{{notice.heading}}</a><pre class="inner">{{notice.description|safe}}</pre>
+                </li>
+              {%endfor%}
+            
+            {%endif%}
+      
+
+          </ul>
+        </div>
+        <a href="{% url 'notices'%}" class="more"><small>More Notices></small></a>
+    </div>
+
+
+      <!-- events -->
+
+      <div class="event">
+        <div class="heading_event"><h1>Events</h1></div>
+        <div class="accordion_data">
+          <ul class="accordion">
+            
+            {%if events_len == 0%}
+              {%if messages%}
+
+                {%for message in messages%}
+                    {%if "events" in message.extra_tags%}  
+                        <p class="message info">{{message}}</p>
+                    {%endif%}
+                {%endfor%}
+              {%endif%}
+
+            {%else%}
+
+                {%for events in events_desc%}
+                <li>
+                  <a class="toggle" href=#>{{events.heading}}</a><pre class="inner">{{events.description|safe}}</pre>
+                </li>
+              {%endfor%}
+            
+            {%endif%}
+      
+    
+          </ul>
+        </div>
+        <a href="{% url 'events'%}" class="more"><small>More Events></small></a>
+    </div>    
+  </div>
+  <!-- notices and events block end -->
+  
+
+
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}    
+<script src="{%static '/home/js/index.js'%}"></script>
+{%endblock%}

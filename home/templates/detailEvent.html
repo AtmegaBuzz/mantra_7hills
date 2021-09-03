@@ -1,0 +1,120 @@
+{%extends 'base.html'%}
+
+{%block links%}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{%static 'home/css/events.css'%}">
+
+{%endblock%}
+
+{%block title%}7Hills Mantra{%endblock%}
+
+{%block content%}
+
+
+
+<div class="rootEventCont">
+
+    <!-- heading -->
+    <div class="latestEvents">
+        <h1>Latest Events</h1>
+    </div>
+
+    <!-- events -->
+
+    <div class="EventsCont">
+
+    <!--  no events message -->
+    {%if messages%}
+    {%for message in messages%}
+        {%if "success" in message.extra_tags%}
+            <p style="text-align: center;color:green;">{{message}}</p>
+        
+        {%else%}
+            <p style="text-align: center;color:red;">{{message}}</p>
+
+        {%endif%}
+    {%endfor%}
+    {%endif%}
+
+
+
+            <div class="event">
+                <span>{{event.updated_at}}</span>
+                <h1>{{event.heading}}</h1>
+                <p><pre>{{event.description|safe}}</pre></p>
+                
+                {%if event.joinEvent%}
+                    <h2>Join the event</h2>
+                    <form method="POST">{%csrf_token%}
+
+                        <div class="yatay">
+
+                            <label>
+                                <span>First name</span>
+                                {{form.fname}}
+                            </label>
+
+                            <label>
+                                <span>Last name</span>
+                                {{form.lname}}
+                            </label>
+
+                        </div>
+                        <div class="yatay">
+                            <label>
+                                <span>Flat</span>
+                                {{form.flat}}
+                            </label>
+
+                            <label for="">
+                                <span>Block</span>
+                                {{form.block}}
+                            </label>
+
+                        </div>
+
+                        <div class="yatay">
+
+                            <label>
+                                <span>Flat No</span>
+                                {{form.flat_no}}
+                            </label>
+
+                        </div>
+
+                        
+
+
+                        <div class="submitBtn">
+                            <button type="submit">Register for this event</button>
+                        </div>
+                        {%if messages%}
+                            {%for message in messages%}
+                                {%if "success" in message.extra_tags%}
+                                    <p style="text-align: center;color:green;">{{message}}</p>
+                                {%endif%}
+                            {%endfor%}
+                        {%endif%}
+                        
+                    </form>   
+               
+                {%endif%}
+                
+            </div>
+
+            
+            
+        
+            
+            
+    </div>
+
+</div>
+
+
+{%endblock%}
+
+{%block javascript%}
+{%load static%}
+<script src="{%static '/home/js/events.js'%}"></script>
+{%endblock%}
