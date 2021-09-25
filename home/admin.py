@@ -10,3 +10,5 @@ from import_export.admin import ImportExportModelAdmin
 
 class ViewAdmin(ImportExportModelAdmin):
     pass
+
+admin.site.site_header = "Mantra 7Hills Administrator"

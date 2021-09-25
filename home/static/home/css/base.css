@@ -59,7 +59,7 @@
 	float: left;
 	height: 100vh;
 	overflow-x: hidden;
-	display: none;
+	display: flex;
 	position: fixed;
 }
 
