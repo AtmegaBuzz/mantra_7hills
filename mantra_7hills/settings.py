@@ -57,19 +57,19 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'https://cdn.jsdelivr.net',
-    'https://cdn.jsdelivr.net',
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'https://cdn.jsdelivr.net',
+#     'https://cdn.jsdelivr.net',
 
-    'https://ajax.googleapis.com',
+#     'https://ajax.googleapis.com',
 
-    'https://fonts.googleapis.com',
+#     'https://fonts.googleapis.com',
 
-    'https://cdnjs.cloudflare.com',
+#     'https://cdnjs.cloudflare.com',
 
-    'http://127.0.0.1:8000'
-)
+#     'http://127.0.0.1:8000'
+# )
 
 
 ROOT_URLCONF = 'mantra_7hills.urls'
@@ -159,12 +159,12 @@ STATIC_ROOT = 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#  HTTPS Settings
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# #  HTTPS Settings
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
 
-# HSTS SETTINGS
-SECURE_HSTS_SECONDS = 31536000 # 1 YEAR
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# # HSTS SETTINGS
+# SECURE_HSTS_SECONDS = 31536000 # 1 YEAR
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
