@@ -11,8 +11,46 @@
 
 {%block content%}
 
-    <div id="container" style="">
-        <canvas id="pie-chart"></canvas>
+    <style>
+              
+        .Expenses{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 15vh;
+        }
+
+        .Expenses h1{
+          display: grid;
+        grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        }
+
+        .Expenses h1::before, .Expenses h1::after {
+          content: '';
+          border-top: 6px double;
+        }
+
+        #container{
+          margin-top: 10px;
+        }
+
+    
+
+    </style>
+
+
+
+    <div class="Expenses">
+      <h1>Expenses Report</h1>
+    </div>
+
+
+    <div id="container" >
+        <canvas id="bar-chart"></canvas>
     </div>
 
 {%endblock%}
@@ -25,7 +63,7 @@
 <script>
 
     var config = {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         datasets: [{
           data: {{ data|safe }},
@@ -40,7 +78,7 @@
     };
 
     window.onload = function() {
-      var ctx = document.getElementById('pie-chart').getContext('2d');
+      var ctx = document.getElementById('bar-chart').getContext('2d');
       window.myPie = new Chart(ctx, config);
     };
 

@@ -8,24 +8,26 @@
     <!-- bootstrap -->
     
     {%block links%} {%endblock%}
-
+    <!-- botstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
     <!-- jquery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 
     <!-- material design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
-    <link rel="stylesheet" type="text/css" href="{%static 'home/css/base.css'%}">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js">
-
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js"> -->
+    
+    
+    <link rel="stylesheet" type="text/css" href="{%static 'home/css/base.css'%}">
 
 
     <title>{%block title%} {%endblock%}</title>
@@ -37,9 +39,7 @@
     
     
     <div id="accordian">
-        <div id="closebtn">
-            <button style="margin-left: 90%; color:white;" type="button" class="btn-close" id="closenav" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
+        
         <ul class="show-dropdown">
             <li class="active">
                 <a href="{%url 'home'%}"><i class="fas fa-home"></i>Home</a>
@@ -86,8 +86,12 @@
                 <p class="logoText">Mantra 7-Hills</p>
             </div> 
             <div class="nav_icon dotNav" id="tiltnav">
-                <input type="checkbox" id="navcheck">
-                <i class="fas fa-bars"></i>
+                <div id="toggle" class="togglemenue">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                  
             </div>
         </div>
             
@@ -104,42 +108,29 @@
 </body>
 
 <script>
-    const opennav = ()=>{
+   
+
         $(document).ready(()=>{
-            $("#accordian").css("width","270px")
-        
-            $("#accordian").css("display","block")
+
+            $("#toggle").on("click",()=>{
+                $("#accordian").slideToggle()
+                
+
+            })
+
+            $("#closebtn").on("click",()=>{
+                $("#accordian").css("display","none")
+            })
+
         })
-    }
-    
-    const closenav = ()=>{
-        $(document).ready(()=>{
-            $("#accordian").css("width","0")
-            $("#accordian").css("display","none")
-    
-        })
-    }
     
     
     
-    let navcheck = document.getElementById("navcheck")
-    let closebtn = document.getElementById("closenav")
+    
+    
 
    
-    navcheck.addEventListener("click",()=>{
-
-        if(navcheck.checked){
-            opennav()
-        }
-        else{
-            closenav()
-        }
-        
-    })
-    
-    closebtn.addEventListener("click",()=>{
-        closenav();
-    })
+   
     
 </script>
 

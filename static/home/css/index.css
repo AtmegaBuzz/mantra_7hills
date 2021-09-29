@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,600&display=swap");
+
+.typingtext{
+    margin-top: 10px;
+    display: flex;
+}
+
+.homecontent{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-top: 1px solid rgb(175, 170, 170);
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+
+.imageCoverCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.image--cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
+
+
+.blockC p{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    /* margin-top: 4px; */
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    }
+
+
+.typingtext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+      
+.lead{
+    text-align: center;
+    max-width: 800px;
+    padding: 10px;
+}
+
+#society{
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(41, 3, 73);
+}
+
+
+.Info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.notice,.event{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 580px;
+  margin: 30px;
+  border: 1px solid black;
+  border-bottom-right-radius: 10px ;
+  border-bottom-left-radius: 10px ;
+
+}
+
+.heading_notice,.heading_event{
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(60, 0, 128);
+  padding: 10px;
+}
+
+.accordion {
+  list-style: none;
+  padding: 0;
+  
+}
+.accordion_data{
+  width: 100%;
+  padding: 10px;
+}
+.accordion .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+
+.accordion li {
+  margin: 0.5em 0;
+}
+
+.accordion li a.toggle {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fefefe;
+  padding: 0.75em;
+  border-radius: 0.15em;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.accordion li a.toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.more{
+  height: 30px;
+  margin-left: 30px;
+}
+
+.message{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.info{
+  color: red;
+}

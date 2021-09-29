@@ -1,0 +1,22 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.heading h1{
+    display: grid;
+  grid-template-columns: minmax(50px, 1fr) auto minmax(50px, 1fr);
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  }
+  
+  .heading h1::before, .heading h1::after {
+    content: '';
+    border-top: 6px double;
+  }
+  
